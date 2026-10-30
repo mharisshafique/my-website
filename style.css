@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color1: #daf1de;
+  --color2: #8eb69b;
+  --color3: #235347;
+  --color4: #163832;
+  --color5: #0b2b26;
+  --color6: #051f20;
+}
+
+body {
+  background-color: var(--color1);
+}
+
+header {
+  padding: 20px 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color6);
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--color1);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s linear;
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+nav a:hover {
+  color: var(--color2);
+  background-color: var(--color4);
+}
+
+header .logo span:nth-child(1) {
+  background-color: var(--color2);
+  border-radius: 5px;
+  color: var(--color6);
+  font-weight: 800;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
+header .logo span {
+  color: var(--color1);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+}
+
+main p {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main h1 {
+  font-size: 70px;
+  text-transform: capitalize;
+  color: var(--color6);
+  width: 15ch;
+  text-align: center;
+  font-weight: 500;
+}
+
+main h1 span {
+  color: var(--color2);
+}
+
+@media screen and (width <= 500px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header .logo span:nth-child(1) {
+    font-size: 32px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  header .logo span {
+    font-size: 32px;
+  }
+
+  main {
+    height: 70vh;
+  }
+
+  main h1 {
+    font-size: 48px;
+  }
+}
